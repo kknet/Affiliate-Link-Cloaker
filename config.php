@@ -190,7 +190,7 @@ file_put_contents($file, $newdata, FILE_APPEND | LOCK_EX);
 $do = file_get_contents('3.php');
 file_put_contents($file, $do, FILE_APPEND | LOCK_EX);
 
-echo 'You Cloaked URL Is http://sdmuntraced.in/' . $dir ;
+echo 'You Cloaked URL Is site /' . $dir ;
 
 
 
