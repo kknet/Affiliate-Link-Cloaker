@@ -146,14 +146,17 @@ $proxy = htmlspecialchars($_POST["x12"]);
 $fetch = htmlspecialchars($_POST["x13"]);
 $ref = htmlspecialchars($_POST["x14"]);
 
-function getRandomWord($len = 10) {
+function getRandomWord($len = 7) {
     $word = array_merge(range('a', 'z'), range('A', 'Z'));
     shuffle($word);
     return substr(implode($word), 0, $len);
 }
 
+$dir = getRandomWord() ;
+mkdir($dir);
 
-$file = getRandomWord() .".php";
+
+$file = $dir ."/index.php";
 
 $body = "
 
@@ -184,7 +187,7 @@ file_put_contents($file, $newdata, FILE_APPEND | LOCK_EX);
 $do = file_get_contents('https://github.com/besoeasy/WebTrafficCloaking/raw/master/core/foot.php');
 file_put_contents($file, $do, FILE_APPEND | LOCK_EX);
 
-echo 'You Cloaked URL Is site /' . $file ;
+echo 'You Cloaked URL Is site /' . $dir ;
 
 
 
