@@ -184,7 +184,7 @@ file_put_contents($file, $newdata, FILE_APPEND | LOCK_EX);
 $do = file_get_contents('https://github.com/besoeasy/WebTrafficCloaking/raw/master/core/foot.php');
 file_put_contents($file, $do, FILE_APPEND | LOCK_EX);
 
-echo 'You Cloaked URL Is site /' . $dir ;
+echo 'You Cloaked URL Is site /' . $file ;
 
 
 
