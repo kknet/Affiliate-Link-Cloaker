@@ -137,9 +137,7 @@ else
     
 }
 
-$emailx = htmlspecialchars($_POST["x5"]);
 $refto = htmlspecialchars($_POST["rtt"]);
-$emaillogs = htmlspecialchars($_POST["x8"]);
 $logs = htmlspecialchars($_POST["x10"]);
 $tor = htmlspecialchars($_POST["x11"]);
 $proxy = htmlspecialchars($_POST["x12"]);
