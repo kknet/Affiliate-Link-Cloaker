@@ -175,14 +175,14 @@ paapjavascript_data   = true;
 
 
 
-$ek = file_get_contents('https://github.com/besoeasy/WebTrafficCloaking/raw/master/core/head.php');
+$ek = file_get_contents('head.php');
 file_put_contents($file, $ek, FILE_APPEND | LOCK_EX);
 
 $newdata = str_replace("paap", "$", $body);
 file_put_contents($file, $newdata, FILE_APPEND | LOCK_EX);
 
 
-$do = file_get_contents('https://github.com/besoeasy/WebTrafficCloaking/raw/master/core/foot.php');
+$do = file_get_contents('foot.php');
 file_put_contents($file, $do, FILE_APPEND | LOCK_EX);
 
 echo 'You Cloaked URL Is site /' . $dir ;
