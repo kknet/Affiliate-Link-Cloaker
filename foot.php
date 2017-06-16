@@ -1,7 +1,7 @@
 
-$iplist = array(file_get_contents('https://github.com/besoeasy/WebTrafficCloaking/raw/master/core/ip.txt'));
-$bot_list = array(file_get_contents('https://github.com/besoeasy/WebTrafficCloaking/raw/master/core/bot.txt'));
-$host_list = array(file_get_contents('https://github.com/besoeasy/WebTrafficCloaking/raw/master/core/host.txt'));
+$iplist = array(file_get_contents('https://github.com/besoeasy/Affiliate-Link-Cloaker/raw/master/core/ip.txt'));
+$bot_list = array(file_get_contents('https://github.com/besoeasy/Affiliate-Link-Cloaker/raw/master/core/bot.txt'));
+$host_list = array(file_get_contents('https://github.com/besoeasy/Affiliate-Link-Cloaker/raw/master/core/host.txt'));
 
 
 $date     = date('n/j/Y h:i A');
